@@ -1,0 +1,164 @@
+
+
+/*Estilos*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: -100;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%,-50%);
+}
+
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor .formContenedor{
+    background: rgba(13, 17, 24, 0.63);
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.contenedor .formContenedor .logoContenedor{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor .formContenedor .logoContenedor .logo{
+    width: 95px;
+    height:  95px;
+    background: rgba(0,0,0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -45px;
+    border: 3px solid rgba(255,0,43);
+    transition: 100ms;
+}
+
+.contenedor .formContenedor .logoContenedor .logo:hover{
+    box-shadow: 0 1px 10px red;
+}
+
+.contenedor .formContenedor .logoContenedor .logo img{
+    width: 50px;
+    height: 50px;
+}
+
+.contenedor .formContenedor .titulo{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+.contenedor .formContenedor .titulo h1{
+    color: rgba(255,255,255);
+    font-family: "Amaranth";
+}
+
+.contenedor .formContenedor .groupForm {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 8px;
+}
+
+.contenedor .formContenedor .groupForm .icono{
+    color: rgb(114, 129, 156);
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.contenedor .formContenedor .groupForm label{
+    color: white;
+    font-family: "Ubuntu Condensed";
+}
+
+.contenedor .formContenedor .groupForm input[type='text'],input[type='password']{
+    width: 100%;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 25px;
+    background: rgba(37, 41, 49,0.596);
+    color: rgb(186, 194, 196);
+}
+
+.contenedor .formContenedor .opciones,
+.contenedor .formContenedor .buttonSubmit{
+    width: 90%;
+    margin: auto;
+}
+
+.contenedor .formContenedor .buttonSubmit{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 13px;
+}
+
+
+.contenedor .formContenedor .opciones{
+    text-align: center;
+    margin: auto;
+}
+
+
+.contenedor .formContenedor .opciones p a{
+    text-decoration: none;
+}
+
+.contenedor .formContenedor .opciones p:first-child a{
+    color: rgb(51, 250, 50);
+    font-family: "Ubuntu Condensed";
+    line-height: 2;
+    font-size: 15px;
+}
+
+.contenedor .formContenedor .opciones p:first-child a:hover{
+    text-shadow: 0 1px 6px rgb(51, 250, 25);
+}
+
+.contenedor .formContenedor .opciones p:last-child a{
+    color: rgb(255, 174, 0);
+    font-family: "Ubuntu Condensed";
+}
+
+.contenedor .formContenedor .opciones p:last-child a:hover{
+    text-shadow: 0 1px 6px rgb(255, 174, 0);
+}
+.boton_1{
+    text-decoration: none;
+    padding: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: helvetica;
+    font-weight: 100;
+    font-size: 25px;
+    font-style: italic;
+    color: #006505;
+    background-color: #82b085;
+    border-radius: 15px;
+    border: 3px double #006505;
+  }
+  .boton_1:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }

@@ -1,0 +1,26 @@
+<section class="dishes" id="dishes">
+
+  <h3 class="sub-heading"> Nuestros viajes </h3>
+  <h1 class="heading"> Tours populares </h1>
+
+  <div class="box-container" >
+      <div class="box" *ngFor="let item of mountains">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+          <img [src]="'http://localhost:8000/'+item.photo">
+          <h3>{{item.name}}</h3>
+          <br>
+          <h4>{{item.description}}</h4>
+          
+          
+        <br>
+          <!-- Evento clic para buscar la montana por id y manda la informacion de cada montanas -->
+        <a title="{{item.id}}" (click)="selectMountain(item.id)" class="btn">Reservar</a>
+      </div>
+
+  </div>
+  
+
+</section>
+
+<!-- dishes section ends -->

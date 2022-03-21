@@ -1,0 +1,70 @@
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+  <h1 contenteditable data-heading="Turistik">
+    Reserva
+</h1>
+
+<section class="order" id="order">
+
+  <h3 class="sub-heading"> Animate </h3>
+  
+  <h2 class="heading"> Rápido y fácil </h2>
+  <br>
+  <br>
+  <div align="center">
+    <app-modal1></app-modal1>
+   </div>
+  
+  <button class="btn btn-success" (click)="regresar()" >Regresar</button>
+  <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+<br>
+
+<br>
+      <div class="inputBox">
+          <select class="holi" aria-label="Default select example"  formControlName="partidas_id">
+          <option *ngFor="let data of partidas" value="{{data.id}}" >{{data.partida}}</option>
+        
+        </select>
+          <div class="input">
+              <span>Tu numero</span>
+              <input type="text" formControlName="numero" placeholder="Ingresa tu numero">
+          </div>
+      </div>
+      <div class="inputBox">
+          <div class="input">
+              <span>Tu paseo</span>
+              <input type="text" value="{{montanas.name}}"  disabled=»disabled» >
+          </div>
+          <div class="input">
+              <span>Guia para este tour</span>
+              <input type="test" value="{{guia.name}}"  disabled=»disabled» >
+          </div>
+      </div>
+      <div class="inputBox">
+          <div class="input">
+              <span>Cuántas Personas?</span>
+              <input type="number"  formControlName="n_personas" placeholder="Cuantas personas van?">
+          </div>
+          <div class="input">
+              <span>Fecha</span>
+              <input value="{{montanas.fecha}}"  disabled=»disabled»>
+          </div>
+      </div>
+     
+<br>
+<div align="center">
+<button class="button" type="submit" >Enviar</button>
+</div>
+
+  </form>
+  
+     <input type="submit" value="order now" class="btn">
+</section>
+
+</body>

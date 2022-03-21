@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-1">
+            
+        </div>
+        <div class="col-lg-10">
+
+                        <h2>Perfil</h2>
+        
+                    <h1>{{user.name}}</h1>
+                  
+         <button class="btn btn-success" (click)="regresar()" > Regresar</button>
+            
+              
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Destino</th>
+                    <th scope="col">Punto de Partida</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col"># Personas</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of reservas">
+                    <td  ></td>
+                    <th>{{data.montana}}</th>
+                    <td> {{data.partida}} </td>
+                    <td> {{data.fecha}} </td>
+                    <td> {{data.n_personas}} </td>
+                    <td> {{data.numero}} </td>
+                    <td> <button type="button" title="{{data.id}}" (click)="selectEditReserva(data.id)" class="btn btn-info">Actualizar</button>
+                        <button  type="button" title="{{data.id}}" (click)="deleteReserva(data.id)" class="btn btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+                
+                </tbody>
+              </table>
+        </div>
+        <div class="col-lg-1">
+           
+        </div>
+    </div>
+</div>

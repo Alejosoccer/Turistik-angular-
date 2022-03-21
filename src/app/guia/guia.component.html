@@ -1,0 +1,21 @@
+<section class="dishes" id="dishes">
+
+    <h3 class="sub-heading"> Nuestros guias </h3>
+
+    <div class="box-container" >
+        <div class="box" *ngFor="let item of guia">
+            
+            <img [src]="'http://localhost:8000/'+item.photo">
+            <h3>{{item.name}}</h3>
+            <div class="valoracion">
+  
+          </div>
+            <span>{{item.description}}</span>
+            
+        </div>
+  
+    </div>
+    
+  
+  </section>
+  
